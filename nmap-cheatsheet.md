@@ -1,4 +1,4 @@
-## 𝐧𝐦𝐚𝐩 𝐂𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭:
+## Nmap Cheatsheet:
 
 - Basic scans: 
 > - `nmap <hostip>` - Scan Single IPs
@@ -23,7 +23,7 @@
 > - `nmap --script ssl-enum-ciphers -p <port> <host>` : Check SSL
 
 
-Foot notes:
+Foot Notes:
 > - https://www.youtube.com/watch?v=4t4kBkMsDbQ
 
 ---
