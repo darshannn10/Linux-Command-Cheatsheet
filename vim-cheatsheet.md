@@ -1,4 +1,4 @@
-## 𝐕𝐢𝐦 (𝐕𝐢 𝐈𝐦𝐩𝐫𝐨𝐯𝐞𝐝) 𝐂𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭
+## Vim (Vi Improved) Cheatsheet
 
 - Why to learn Vi?
   - Vi is almost always available. Absolute necessary and good to know for pentesting.
@@ -11,7 +11,7 @@
 ~
 ~                         VIM - Vi Improved
 ~
-~                          version 8.0.707
+~                          version 8.2.3995
 ~                     by Bram Moolenaar et al.
 ~            Vim is open source and freely distributable
 ~
@@ -95,5 +95,4 @@ Command | Copies
 - `f`: search within a line
 - `/Line`: search within a file
 - `:%s/Line/line/g`: global search and replace
-- 
 
