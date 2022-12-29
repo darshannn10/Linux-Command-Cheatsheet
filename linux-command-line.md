@@ -1,56 +1,50 @@
-`Note: These are my notes for personal reference!`
-
-
-
-## 𝐁𝐚𝐬𝐢𝐜
+## Basics
 
 - `date` : displays the current time and date
 ```
-┌──(shreyas㉿kali)-[~]
-└─$ date
-Tuesday 04 January 2022 03:39:43 PM IST
+┌──(darshan㉿kali)-[~]
+└─$ date                            
+Thu Dec 21 08:40:05 AM EST 2022
 ```                        
 
 ---
 
 - `cal` : displays a calendar of the current month
 ```
-┌──(shreyas㉿kali)-[~]
-└─$ cal  
-    January 2022      
+┌──(darshan㉿kali)-[~]
+└─$ cal
+   December 2022      
 Su Mo Tu We Th Fr Sa  
-                   1  
- 2  3  4  5  6  7  8  
- 9 10 11 12 13 14 15  
-16 17 18 19 20 21 22  
-23 24 25 26 27 28 29  
-30 31                 
-
+             1  2  3  
+ 4  5  6  7  8  9 10  
+11 12 13 14 15 16 17  
+18 19 20 21 22 23 24  
+25 26 27 28 29 30 31               
 ```
 ---
 
 - `df` : the current amount of free space on our disk drives
 ```
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ df  
 Filesystem     1K-blocks     Used Available Use% Mounted on
-udev             1953436        0   1953436   0% /dev
-tmpfs             399160     1168    397992   1% /run
-/dev/sda1      130538556 11247868 112613492  10% /
-tmpfs            1995784        0   1995784   0% /dev/shm
+udev             1967972        0   1967972   0% /dev
+tmpfs             402392      976    401416   1% /run
+/dev/sda1       81000912 25544808  51295492  34% /
+tmpfs            2011956        0   2011956   0% /dev/shm
 tmpfs               5120        0      5120   0% /run/lock
-tmpfs             399156       68    399088   1% /run/user/1000
+tmpfs             402388       72    402316   1% /run/user/1001
               
 ```
 ---
 - `free` : display the amount of free memory
 ```
-┌──(shreyas㉿kali)-[~]
-└─$ free                      
+┌──(darshan㉿kali)-[~]
+└─$ free   
                total        used        free      shared  buff/cache   available
-Mem:         3991568      672232     2753624        8864      565712     3079888
+Mem:         4023912      620728     2735516        8572      667668     3169552
 Swap:         998396           0      998396
-            
+                                           
 ```
 ---
 
@@ -58,23 +52,23 @@ Swap:         998396           0      998396
 
 - `pwd` : print working directory
 ```
-┌──(shreyas㉿kali)-[~]
-└─$ pwd                
-/home/shreyas
+┌──(darshan㉿kali)-[~]
+└─$ pwd                 
+/home/darshan
                 
 ```
 ---
 
 - `cd` : change directory
 ```
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ cd practise           
                                                                                        
-┌──(shreyas㉿kali)-[~/practise]
+┌──(darshan㉿kali)-[~/practise]
 └─$ pwd
-/home/shreyas/practise
+/home/darshan/practise
                                                                                        
-┌──(shreyas㉿kali)-[~/practise]
+┌──(darshan㉿kali)-[~/practise]
 └─$ ls 
 hackthebox
 
@@ -96,77 +90,68 @@ cd ~user_name | Changes the working directory to the home directory of user_name
 >   - `ls -t`: the t option to sort the result by the file’s modification time.
 >   - `ls -lt --reverse`: --reverse to reverse the order of the sort.
 ```
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ ls
 BugBounty  Documents  Music     practise  Templates
 Desktop    Downloads  Pictures  Public    Videos
                                                                                        
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ ls /usr      
-bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
+bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src                                                                                      
                                                                                        
-┌──(shreyas㉿kali)-[~]
-└─$ ls practise /usr
-practise:
-hackthebox
-
-/usr:
-bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
-                                                                                       
-┌──(shreyas㉿kali)-[~]
-└─$ ls -l          
-total 176
-drwxr-xr-x  3 shreyas shreyas  4096 Jan  1 17:38 BugBounty
-drwxr-xr-x  2 shreyas shreyas  4096 Dec 14 19:34 Desktop
-drwxr-xr-x  2 shreyas shreyas  4096 Dec 14 19:34 Documents
-drwxr-xr-x  3 shreyas shreyas  4096 Dec 29 15:32 Downloads
-drwxr-xr-x  2 shreyas shreyas  4096 Dec 14 19:34 Music
-drwxr-xr-x  2 shreyas shreyas  4096 Dec 14 19:34 Pictures
-drwxr-xr-x  3 shreyas shreyas  4096 Dec 26 21:40 practise
-drwxr-xr-x  2 shreyas shreyas  4096 Dec 14 19:34 Public
-drwxr-xr-x  2 shreyas shreyas  4096 Dec 14 19:34 Templates
-drwxr-xr-x  2 shreyas shreyas  4096 Dec 14 19:34 Videos
-
-                                                                                       
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~/Desktop]
+└─$ ls -l 
+total 112
+drwxr-xr-x  3 darshan darshan  4096 Aug 30 14:40 Binary_Exploitation
+drwxr-xr-x  3 darshan darshan  4096 Nov  6 15:18 Bounty
+drwxr-xr-x  2 darshan darshan  4096 Sep  8 03:12 hashes
+drwxr-xr-x  8 darshan darshan  4096 Dec  4 00:55 PentesterLab
+-rw-r--r--  1 darshan darshan  5493 Nov  8 10:26 php-rev-shell.php
+drwxr-xr-x  3 darshan darshan  4096 Dec  4 00:58 PicoCtf
+-rw-r--r--  1 darshan darshan 73728 Dec  4 14:10 squirrelwaffle.dll
+drwxr-xr-x 27 darshan darshan  4096 Nov  8 04:45 TryHackMe
+drwxr-xr-x  2 darshan darshan  4096 Sep 24 07:15 tty_shells
+drwxr-xr-x  4 darshan darshan  4096 Dec  5 10:11 workspace                                                                                                                       
+                                                                            
+┌──(darshan㉿kali)-[~/Desktop]
 └─$ ls -lt
-total 40
-drwxr-xr-x 3 shreyas shreyas 4096 Jan  1 17:38 BugBounty
-drwxr-xr-x 3 shreyas shreyas 4096 Dec 29 15:32 Downloads
-drwxr-xr-x 3 shreyas shreyas 4096 Dec 26 21:40 practise
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Desktop
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Documents
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Music
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Pictures
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Public
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Templates
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Videos
-
-                                                                                       
-┌──(shreyas㉿kali)-[~]
-└─$ ls -lt --reverse                                                               2 ⨯
-total 40
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Videos
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Templates
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Public
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Pictures
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Music
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Documents
-drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Desktop
-drwxr-xr-x 3 shreyas shreyas 4096 Dec 26 21:40 practise
-drwxr-xr-x 3 shreyas shreyas 4096 Dec 29 15:32 Downloads
-drwxr-xr-x 3 shreyas shreyas 4096 Jan  1 17:38 BugBounty
-                                                                                       
+total 112
+drwxr-xr-x  4 darshan darshan  4096 Dec  5 10:11 workspace
+-rw-r--r--  1 darshan darshan 73728 Dec  4 14:10 squirrelwaffle.dll
+drwxr-xr-x  3 darshan darshan  4096 Dec  4 00:58 PicoCtf
+drwxr-xr-x  8 darshan darshan  4096 Dec  4 00:55 PentesterLab
+-rw-r--r--  1 darshan darshan  5493 Nov  8 10:26 php-rev-shell.php
+drwxr-xr-x 27 darshan darshan  4096 Nov  8 04:45 TryHackMe
+drwxr-xr-x  3 darshan darshan  4096 Nov  6 15:18 Bounty
+drwxr-xr-x  2 darshan darshan  4096 Sep 24 07:15 tty_shells
+drwxr-xr-x  2 darshan darshan  4096 Sep  8 03:12 hashes
+drwxr-xr-x  3 darshan darshan  4096 Aug 30 14:40 Binary_Exploitation
+          
+          
+┌──(darshan㉿kali)-[~/Desktop]
+└─$ ls -lt --reverse
+total 112
+drwxr-xr-x  3 darshan darshan  4096 Aug 30 14:40 Binary_Exploitation
+drwxr-xr-x  2 darshan darshan  4096 Sep  8 03:12 hashes
+drwxr-xr-x  2 darshan darshan  4096 Sep 24 07:15 tty_shells
+drwxr-xr-x  3 darshan darshan  4096 Nov  6 15:18 Bounty
+drwxr-xr-x 27 darshan darshan  4096 Nov  8 04:45 TryHackMe
+-rw-r--r--  1 darshan darshan  5493 Nov  8 10:26 php-rev-shell.php
+drwxr-xr-x  8 darshan darshan  4096 Dec  4 00:55 PentesterLab
+drwxr-xr-x  3 darshan darshan  4096 Dec  4 00:58 PicoCtf
+-rw-r--r--  1 darshan darshan 73728 Dec  4 14:10 squirrelwaffle.dll
+drwxr-xr-x  4 darshan darshan  4096 Dec  5 10:11 workspace
+                                                                                                   
 ```
 ---
 
 - `file filename` :  the file command will print a brief description of the file’s contents
 ```
-┌──(shreyas㉿kali)-[~/practise/hackthebox]
+┌──(darshan㉿kali)-[~/Desktop/TryHackMe]
 └─$ file flag.txt             
 flag.txt: ASCII text, with no line terminators
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/hackthebox]
+┌──(darshan㉿kali)-[~/Desktop/TryHackMe]
 └─$ file pack.ovpn 
 pack.ovpn: ASCII text
 
@@ -176,10 +161,10 @@ pack.ovpn: ASCII text
 - `less` : allows us to scroll forward and backward through a text file.
   - `Note: less is more. Means both commands are same` 
 ```
-┌──(shreyas㉿kali)-[~/practise/hackthebox]
+┌──(darshan㉿kali)-[~/Desktop/TryHackMe]
 └─$ cat example | less
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/hackthebox]
+┌──(darshan㉿kali)-[~/Desktop/TryHackMe]
 └─$ less example
 ```
 
@@ -246,17 +231,18 @@ Pattern | Matches
     
     
 ```
-┌──(shreyas㉿kali)-[~/practise]
+┌──(darshan㉿kali)-[~/Desktop/practise]
 └─$ mkdir commandline
                                                                                        
-┌──(shreyas㉿kali)-[~/practise]
-└─$ ls          
-commandline  hackthebox
+┌──(darshan㉿kali)-[~/Desktop/practise]
+└─$ ls
+commandline  TryHackMe
 
-┌──(shreyas㉿kali)-[~/practise/commandline]
+
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ mkdir dir1 dir2 dir3
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ ls
 dir1  dir2  dir3
 
@@ -280,7 +266,7 @@ Option | Meaning
 ---
 
 - `rm file` : remove files and directories
-
+- `rm -rf file` : remove entire directory in one command
 
 Option | Meaning
 --- | ---
@@ -302,15 +288,15 @@ Option | Meaning
 - `type`: is a shell builtin that displays the kind of command the shell will execute
 
 ```
-┌──(shreyas㉿kali)-[~/practise/commandline]
-└─$ type ls      
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
+└─$ type ls                          
 ls is an alias for ls --color=auto
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ type ssh
 ssh is /usr/bin/ssh
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ type cd 
 cd is a shell builtin
                           
@@ -320,23 +306,23 @@ cd is a shell builtin
 - `which` : Display an Executable’s Location
 
 ```
-┌──(shreyas㉿kali)-[~/practise/commandline]
-└─$ which ls           
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
+└─$ which ls               
 ls: aliased to ls --color=auto
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ which pwd
 pwd: shell built-in command
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ which cd 
 cd: shell built-in command
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ which gedit
 /usr/bin/gedit
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ which firefox
 /usr/bin/firefox
                        
@@ -347,7 +333,7 @@ cd: shell built-in command
 - `man` : Display a Program’s Manual Page
 
 ```
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ man ls         
 ```
 
@@ -384,8 +370,8 @@ DESCRIPTION
 - `apropos` - Display Appropriate Commands
 
 ```
-┌──(shreyas㉿kali)-[~/practise/commandline]
-└─$ apropos copy            
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
+└─$ apropos copy
 cifsdd (8)           - convert and copy a file over SMB
 COPY (7)             - copy data between a file and a table
 cp (1)               - copy files and directories
@@ -394,18 +380,20 @@ cpio (1)             - copy files to and from archives
 cppw (8)             - copy with locking the given file to the password or group file
 dd (1)               - convert and copy a file
 debconf-copydb (1)   - copy a debconf database
+docker-container-cp (1) - Copy files/folders between a container and the local filesystem
+docker-cp (1)        - Copy files/folders between a container and the local filesystem
 git-checkout-index (1) - Copy files from the index to the working tree
-gvfs-copy (1)        - Deprecated equivalent of gio copy
 install (1)          - copy files and set attributes
+llvm-objcopy-13 (1)  - object copying and editing tool
 mariadb-hotcopy (1)  - a database backup program
 mysqlhotcopy (1)     - a database backup program
 ntfscp (8)           - copy file to an NTFS volume.
 objcopy (1)          - copy and translate object files
-ptrepack (1)         - Copy any PyTables Leaf, Group or complete subtree into anothe...
+ptrepack (1)         - Copy any PyTables Leaf, Group or complete subtree into another file.
 rcp (1)              - OpenSSH secure file copy
 rsync (1)            - a fast, versatile, remote (and local) file-copying tool
 scp (1)              - OpenSSH secure file copy
-ssh-copy-id (1)      - use locally available keys to authorise logins on a remote ma...
+ssh-copy-id (1)      - use locally available keys to authorise logins on a remote machine
 svnversion (1)       - Produce a compact version identifier for a working copy.
 vfs_shadow_copy (8)  - Expose snapshots to Windows clients as shadow copies.
 vfs_shadow_copy2 (8) - Expose snapshots to Windows clients as shadow copies.
@@ -418,15 +406,15 @@ x86_64-linux-gnu-objcopy (1) - copy and translate object files
 - `whatis` : Display One-line Manual Page Descriptions
 
 ```
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ whatis rm    
 rm (1)               - remove files or directories
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/commandline]
-└─$ whatis ls
-ls (1)               - list directory contents
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
+└─$ whatis rm    
+rm (1)               - remove files or directories
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ whatis sudo
 sudo (8)             - execute a command as another user
                             
@@ -438,7 +426,7 @@ sudo (8)             - execute a command as another user
 
 ```
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ info ls
 
 ```
@@ -508,16 +496,17 @@ bash: type: foo: not found
 - `<command> > <file>` : Redirecting Standard Output
 
 ```
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ ls -l /usr/bin > ls-output.txt
                                                                                        
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ ls -l                         
-total 180
-drwxr-xr-x 2 shreyas shreyas   4096 Jan  4 17:21 dir1
-drwxr-xr-x 2 shreyas shreyas   4096 Jan  4 17:21 dir2
-drwxr-xr-x 2 shreyas shreyas   4096 Jan  4 17:21 dir3
--rw-r--r-- 1 shreyas shreyas 171639 Jan  4 18:21 ls-output.txt
+total 200
+drwxr-xr-x 2 darshan kali   4096 Dec 23 08:52 dir1
+drwxr-xr-x 2 darshan kali   4096 Dec 23 08:52 dir2
+drwxr-xr-x 2 darshan kali   4096 Dec 23 08:52 dir3
+-rw-r--r-- 1 darshan kali 191762 Dec 23 08:59 ls-output.txt
+
                                                                    
 ```
 
@@ -555,9 +544,9 @@ drwxr-xr-x 2 shreyas shreyas   4096 Jan  4 17:21 dir3
 - 
 
 ```
-┌──(shreyas㉿kali)-[~/practise/commandline]
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
 └─$ wc ls-output.txt 
-  2557  24294 171639 ls-output.txt
+  2812  26863 191762 ls-output.txt
 
 ```
 ```
@@ -588,46 +577,45 @@ lrwxrwxrwx 1 root root           6 2016-01-31 05:22 zsoelim -> soelim
     - `echo ~` : tilde expansion
 
 ```
-┌──(shreyas㉿kali)-[~]
-└─$ echo hello there my name is shreyas                       
-hello there my name is shreyas
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
+└─$ echo hello there, my name is darshan!
+hello there, my name is darshan!
                                                                                        
-┌──(shreyas㉿kali)-[~]
-└─$ echo *                             
-BugBounty Desktop Documents Downloads Music Pictures practise Public Templates Videos
+┌──(darshan㉿kali)-[~/Desktop/practise/commandline]
+└─$ echo *                               
+dir1 dir2 dir3 ls-output.txt
                                                                                        
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ echo D*
 Desktop Documents Downloads
                                                                                        
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ echo *s
-Documents Downloads Pictures Templates Videos
+Documents domains Downloads Pictures SecLists Templates Videos
                                                                                        
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ echo [[:upper:]]*
-BugBounty Desktop Documents Downloads Music Pictures Public Templates Videos
+Binary_Exploitation Bounty PentesterLab PicoCtf TryHackMe
                                                                                        
-┌──(shreyas㉿kali)-[~]
-└─$ echo /usr/*/share
+┌──(darshan㉿kali)-[~]
+└─$ echo /usr/*/share  
 /usr/local/share
                                                                                       
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ echo ~           
-/home/shreyas
-
-                                                                                       
+/home/darshan
+                                                                                  
 ```
 
 - Arithmetic Expansion:
     - `$((expression))` 
    
 ```                                                                                      
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ echo $((2 + 2))
 4
 
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ echo $(($((5**2)) * 3))
 75
       
@@ -645,21 +633,21 @@ Operator | Description
 - Brace Expansion: create multiple text strings from a pattern containing braces
 
 ```
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ echo Front-{A,B,C}-Back
 Front-A-Back Front-B-Back Front-C-Back
                                                                                        
-┌──(shreyas㉿kali)-[~]
-└─$  echo Number_{1..5}
+┌──(darshan㉿kali)-[~]
+└─$ echo Number_{1..5}
 Number_1 Number_2 Number_3 Number_4 Number_5
                                                                                        
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ echo {01..15}
 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
-                                                                                       
-┌──(shreyas㉿kali)-[~]
+                                                                             ┌──(darshan㉿kali)-[~]
 └─$ echo a{A{1,2},B{3,4}}b
 aA1b aA2b aB3b aB4b
+
                                                    
 ```
 
@@ -687,7 +675,7 @@ Escape Sequence | Meaning
 `\t` | tab
 
 ```
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ sleep 10; echo -e "Time's up\a"
 Time's up
            
@@ -810,41 +798,39 @@ Notation | Meaning
 - `ping` : Checks if a network is reachable, `ping` command sends a special network packet called an `ICMP ECHO_REQUEST` to a specified host. Most network devices receiving this packet will reply to it, allowing the network connection to be verified.
 
 ```
-┌──(shreyas㉿kali)-[~]
-└─$ ping youtube.com   
-PING youtube.com (142.250.204.46) 56(84) bytes of data.
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=1 ttl=128 time=149 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=2 ttl=128 time=151 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=3 ttl=128 time=188 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=4 ttl=128 time=140 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=5 ttl=128 time=139 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=6 ttl=128 time=120 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=7 ttl=128 time=131 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=8 ttl=128 time=148 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=9 ttl=128 time=137 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=10 ttl=128 time=132 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=11 ttl=128 time=144 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=12 ttl=128 time=128 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=13 ttl=128 time=128 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=14 ttl=128 time=141 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=15 ttl=128 time=135 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=16 ttl=128 time=130 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=17 ttl=128 time=133 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=18 ttl=128 time=142 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=19 ttl=128 time=134 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=20 ttl=128 time=137 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=21 ttl=128 time=139 ms
-^C64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=22 ttl=128 time=140 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=23 ttl=128 time=121 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=24 ttl=128 time=146 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=25 ttl=128 time=136 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=26 ttl=128 time=165 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=27 ttl=128 time=176 ms
-64 bytes from hkg07s38-in-f14.1e100.net (142.250.204.46): icmp_seq=28 ttl=128 time=132 ms
+┌──(darshan㉿kali)-[~/Desktop]
+└─$ ping google.com
+PING google.com (142.250.77.46) 56(84) bytes of data.
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=1 ttl=119 time=5.90 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=2 ttl=119 time=5.28 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=3 ttl=119 time=5.85 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=4 ttl=119 time=6.54 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=5 ttl=119 time=5.62 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=6 ttl=119 time=6.25 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=7 ttl=119 time=13.6 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=8 ttl=119 time=6.20 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=9 ttl=119 time=5.35 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=10 ttl=119 time=29.6 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=11 ttl=119 time=5.89 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=12 ttl=119 time=5.52 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=13 ttl=119 time=5.57 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=14 ttl=119 time=6.34 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=15 ttl=119 time=5.56 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=16 ttl=119 time=6.02 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=17 ttl=119 time=5.32 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=18 ttl=119 time=5.26 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=19 ttl=119 time=5.43 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=20 ttl=119 time=5.77 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=21 ttl=119 time=5.47 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=22 ttl=119 time=5.48 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=23 ttl=119 time=5.43 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=24 ttl=119 time=5.42 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=25 ttl=119 time=11.0 ms
+64 bytes from bom07s26-in-f14.1e100.net (142.250.77.46): icmp_seq=26 ttl=119 time=5.35 ms
 ^C
---- youtube.com ping statistics ---
-28 packets transmitted, 28 received, 0% packet loss, time 27045ms
-rtt min/avg/max/mdev = 120.372/140.817/187.758/14.526 ms
+--- google.com ping statistics ---
+26 packets transmitted, 26 received, 0% packet loss, time 25043ms
+rtt min/avg/max/mdev = 5.258/7.113/29.557/4.846 ms
                                                                     
 ```
 
@@ -853,10 +839,10 @@ rtt min/avg/max/mdev = 120.372/140.817/187.758/14.526 ms
 - `traceroute` : lists all the “hops” network traffic takes to get from the local system to a specified host.
 
 ```
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~/Desktop]
 └─$ traceroute google.com
-traceroute to google.com (142.250.204.110), 30 hops max, 60 byte packets
- 1  192.168.29.2 (192.168.29.2)  0.227 ms  0.099 ms  0.175 ms
+traceroute to google.com (142.250.77.46), 30 hops max, 60 byte packets
+ 1  * * * (* * *)  4.305 ms  4.202 ms  4.180 ms
  2  * * *
  3  * * *
  4  * * *
@@ -877,7 +863,7 @@ traceroute to google.com (142.250.204.110), 30 hops max, 60 byte packets
 - `ip a` : It replaces the earlier and now deprecated `ifconfig` program. 
 
 ```
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ ip a    
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -901,34 +887,43 @@ traceroute to google.com (142.250.204.110), 30 hops max, 60 byte packets
     - `ie` : we can examine the network interfaces in our system
 
 ```
-┌──(shreyas㉿kali)-[~]
-└─$ netstat -ie                   
+┌──(darshan㉿kali)-[~]
+└─$ netstat -ie  
 Kernel Interface table
-eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.x.x  netmask 255.255.255.0  broadcast 192.168.29.255
-        inet6 fe80::20c:29ff:x:x  prefixlen 64  scopeid 0x20<link>
-        ether 00:0c:29:c5:88:a0  txqueuelen 1000  (Ethernet)
-        RX packets 102  bytes 11285 (11.0 KiB)
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet xx.xx.xx.xx  netmask 255.255.0.0  broadcast xx.xx.xx.xx
+        ether xx:xx:xx:xx:xx:xx  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 207  bytes 17053 (16.6 KiB)
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.xx.xx  netmask 255.255.255.0  broadcast 192.168.xx.xx
+        inet6 xxxx::xxxx:xxxx:xxxx:xxxx  prefixlen 64  scopeid 0x20<link>
+        ether xx:xx:xx:xx:xx:xx  txqueuelen 1000  (Ethernet)
+        RX packets 2378  bytes 385580 (376.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 252  bytes 29803 (29.1 KiB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         inet 127.0.0.1  netmask 255.0.0.0
         inet6 ::1  prefixlen 128  scopeid 0x10<host>
         loop  txqueuelen 1000  (Local Loopback)
-        RX packets 8  bytes 400 (400.0 B)
+        RX packets 0  bytes 0 (0.0 B)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 8  bytes 400 (400.0 B)
+        TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
         
                                                                                                        
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ netstat -r 
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
-default         192.168.29.2    0.0.0.0         UG        0 0          0 eth0
-192.168.29.0    0.0.0.0         255.255.255.0   U         0 0          0 eth0
+default         192.168.1.1     0.0.0.0         UG        0 0          0 eth0
+xx.xx.xx.xx     0.0.0.0         255.255.0.0     U         0 0          0 docker0
+xx.xx.xx.xx     0.0.0.0         255.255.255.0   U         0 0          0 eth0
 
 
 ```
@@ -1081,7 +1076,7 @@ Character | Unit
 `M` | Megabytes (units of 1,048,576 bytes)
 `c` | Gigabytes (units of 1,073,741,824 bytes)
 
-- More about `find` options: [Find cheatsheet](https://github.com/shreyaschavhan/linux-commands-cheatsheet/blob/main/find-cheatsheet.md)
+- More about `find` options: [Find cheatsheet](https://github.com/darshannn10/Linux-Command-Cheatsheet/blob/main/find-cheatsheet.md)
 
 ---
 
@@ -1094,11 +1089,3 @@ find ~ -type f -name 'foo*' -print | xargs ls -l
 ```
 
 ---
-
-Remaining:
-- archiving and backup
-- regular expressions
-- text processing
-- compiling programs
-
-
