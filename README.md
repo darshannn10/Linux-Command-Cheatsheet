@@ -1,13 +1,9 @@
-![visitor badge](https://visitor-badge.glitch.me/badge?page_id=shreyaschavhan.linux-commands-cheatsheet&left_text=Views)
 
-# ⁍ 𝐋𝐢𝐧𝐮𝐱 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐂𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭
+# Linux Command CheatSheet
 
-- `gnome-control-center` : open system settings from terminal
-- `xclip -selection clipboard` : to copy output directly to clipboard
 
 Command | Usage 
-:-: | ---
-`ssh` | ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.  
+:-: | ---  
 `ls` | List  information  about  the FILEs (the current directory by default).
 `cd` | Change Directory
 `cat` | Concatenate files and print on the standard output
@@ -27,6 +23,7 @@ Command | Usage
 `mkdir` | make directories
 `cp` | copy files and directories
 `mv` | move files and directories
+`ssh` | ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.
 `telnet` | The telnet command is used for interactive communication with another host using the TELNET protocol
 `nc` | netcat is a simple unix utility which reads and writes data across network connections, using TCP or UDP protocol.
 `openssl` | OpenSSL command line tool
@@ -62,77 +59,54 @@ Command | Usage
 `tail` | output the last part of files
 `ln` | make link between files
 
----
 
-> - `cat ./-` (./ - stands for current directory) : cat a file with name "-"
-> - `cat ./-filename` : cat a file whose name starts with "-" 
-> - `cat \spaces \in \this \filename.txt` (Original filename: `spaces in this filename.txt` ) - cat a file name with spaces
-> - `base64 -d data.txt` - base64 decode a file
-> - `strings filename` - output human readable text from non-humanreadable file: 
-> - `echo "acbdlksjfla KHLKJfdlsfasd" |  tr 'A-Za-z' 'N-ZA-Mn-za-m'` - rotate a text with all lowercase and uppercase by 13 positions: 
-> - `openssl s_client -connect <host>:<port>` : connect a host with ssl encryption
-> - `diff fileone filetwo` : check difference
-> - `tail -n <number of lines> <path & file name>` : print last n lines of a file
-> - `ln -s tmp/files/take-the-command-challenge take-the-command-challenge` : Create a symbolic link named take-the-command-challenge that points to the file tmp/files/take-the-command-challenge.
-> - `find . -delete` : Delete all of the files in this challenge directory including all subdirectories and their contents.
-> - `grep -rl 500`: `-r` for Recursive, read all files in given directory and subdirectories & `-l` for Print the name of each file which contains a match.
-> 
-
------
-
-`Note: These are my notes for personal reference!`
-
-
-
-## 𝐁𝐚𝐬𝐢𝐜
+## Basics
 
 - `date` : displays the current time and date
 ```
-┌──(shreyas㉿kali)-[~]
-└─$ date
-Tuesday 04 January 2022 03:39:43 PM IST
+┌──(darshan㉿kali)-[~]
+└─$ date                            
+Thu Dec 21 08:40:05 AM EST 2022
 ```                        
 
 ---
 
 - `cal` : displays a calendar of the current month
 ```
-┌──(shreyas㉿kali)-[~]
-└─$ cal  
-    January 2022      
+┌──(darshan㉿kali)-[~]
+└─$ cal
+   December 2022      
 Su Mo Tu We Th Fr Sa  
-                   1  
- 2  3  4  5  6  7  8  
- 9 10 11 12 13 14 15  
-16 17 18 19 20 21 22  
-23 24 25 26 27 28 29  
-30 31                 
-
+             1  2  3  
+ 4  5  6  7  8  9 10  
+11 12 13 14 15 16 17  
+18 19 20 21 22 23 24  
+25 26 27 28 29 30 31               
 ```
 ---
 
 - `df` : the current amount of free space on our disk drives
 ```
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ df  
 Filesystem     1K-blocks     Used Available Use% Mounted on
-udev             1953436        0   1953436   0% /dev
-tmpfs             399160     1168    397992   1% /run
-/dev/sda1      130538556 11247868 112613492  10% /
-tmpfs            1995784        0   1995784   0% /dev/shm
+udev             1967972        0   1967972   0% /dev
+tmpfs             402392      976    401416   1% /run
+/dev/sda1       81000912 25544808  51295492  34% /
+tmpfs            2011956        0   2011956   0% /dev/shm
 tmpfs               5120        0      5120   0% /run/lock
-tmpfs             399156       68    399088   1% /run/user/1000
+tmpfs             402388       72    402316   1% /run/user/1001
               
 ```
 ---
 - `free` : display the amount of free memory
 ```
-┌──(shreyas㉿kali)-[~]
-└─$ free                      
+┌──(darshan㉿kali)-[~]
+└─$ free   
                total        used        free      shared  buff/cache   available
-Mem:         3991568      672232     2753624        8864      565712     3079888
+Mem:         4023912      620728     2735516        8572      667668     3169552
 Swap:         998396           0      998396
-            
+                                           
 ```
 ---
 
@@ -140,23 +114,23 @@ Swap:         998396           0      998396
 
 - `pwd` : print working directory
 ```
-┌──(shreyas㉿kali)-[~]
-└─$ pwd                
-/home/shreyas
+┌──(darshan㉿kali)-[~]
+└─$ pwd                 
+/home/darshan
                 
 ```
 ---
 
 - `cd` : change directory
 ```
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ cd practise           
                                                                                        
-┌──(shreyas㉿kali)-[~/practise]
+┌──(darshan㉿kali)-[~/practise]
 └─$ pwd
-/home/shreyas/practise
+/home/darshan/practise
                                                                                        
-┌──(shreyas㉿kali)-[~/practise]
+┌──(darshan㉿kali)-[~/practise]
 └─$ ls 
 hackthebox
 
@@ -178,24 +152,16 @@ cd ~user_name | Changes the working directory to the home directory of user_name
 >   - `ls -t`: the t option to sort the result by the file’s modification time.
 >   - `ls -lt --reverse`: --reverse to reverse the order of the sort.
 ```
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ ls
 BugBounty  Documents  Music     practise  Templates
 Desktop    Downloads  Pictures  Public    Videos
                                                                                        
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ ls /usr      
-bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
+bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src                                                                                      
                                                                                        
-┌──(shreyas㉿kali)-[~]
-└─$ ls practise /usr
-practise:
-hackthebox
-
-/usr:
-bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
-                                                                                       
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ ls -l          
 total 176
 drwxr-xr-x  3 shreyas shreyas  4096 Jan  1 17:38 BugBounty
@@ -210,7 +176,7 @@ drwxr-xr-x  2 shreyas shreyas  4096 Dec 14 19:34 Templates
 drwxr-xr-x  2 shreyas shreyas  4096 Dec 14 19:34 Videos
 
                                                                                        
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ ls -lt
 total 40
 drwxr-xr-x 3 shreyas shreyas 4096 Jan  1 17:38 BugBounty
@@ -225,7 +191,7 @@ drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Templates
 drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Videos
 
                                                                                        
-┌──(shreyas㉿kali)-[~]
+┌──(darshan㉿kali)-[~]
 └─$ ls -lt --reverse                                                               2 ⨯
 total 40
 drwxr-xr-x 2 shreyas shreyas 4096 Dec 14 19:34 Videos
